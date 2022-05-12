@@ -23,17 +23,17 @@ function editNames() {
 // Function to roll the dice 
 function rollTheDice() { 
     setTimeout(function () { 
-        var randomNumber1 = Math.floor(Math.random() * 6) + 1; 
-        var randomNumber2 = Math.floor(Math.random() * 6) + 1; 
+        var randomNum1 = Math.floor(Math.random() * 6) + 1; 
+        var randomNum2 = Math.floor(Math.random() * 6) + 1; 
         document.querySelector(".img1").setAttribute("src", 
-            "dice" + randomNumber1 + ".png"); 
+            "dice" + randomNum1 + ".png"); 
         document.querySelector(".img2").setAttribute("src", 
-            "dice" + randomNumber2 + ".png"); 
+            "dice" + randomNum2 + ".png"); 
 
-        if (randomNumber1 === randomNumber2) { 
+        if (randomNum1 === randomNum2) { 
             document.querySelector("h1").innerHTML = "Draw!"; 
         } 
-        else if (randomNumber1 < randomNumber2) { 
+        else if (randomNum1 < randomNum2) { 
             document.querySelector("h1").innerHTML 
                             = (player2 + " WINS!"); 
         } 
@@ -41,7 +41,7 @@ function rollTheDice() {
             document.querySelector("h1").innerHTML 
                             = (player1 + " WINS!"); 
         } 
-    }, 2500); 
+    }); 
 
 } 
 </script> 
@@ -50,12 +50,12 @@ function rollTheDice() {
 
       <div class="dice">
         <p>Player 1</p>
-        <img class="img1" src="imgs/dice6.png">
+        <img class="img1" src="dice6.png">
       </div>
 
       <div class="dice">
         <p>Player 2</p>
-        <img class="img2" src="imgs/dice6.png">
+        <img class="img2" src="dice6.png">
       </div>
 
     </div>
